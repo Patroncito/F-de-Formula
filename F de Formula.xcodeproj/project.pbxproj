@@ -7,18 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C2F282E2B6B1E5E00D51AB9 /* PilotDrivers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2F282D2B6B1E5E00D51AB9 /* PilotDrivers.swift */; };
+		8C2F28302B6B4C5D00D51AB9 /* HTTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2F282F2B6B4C5D00D51AB9 /* HTTPViewController.swift */; };
 		8C61502D2B6A0DC900245BDB /* F_de_FormulaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C61502C2B6A0DC900245BDB /* F_de_FormulaApp.swift */; };
 		8C61502F2B6A0DC900245BDB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C61502E2B6A0DC900245BDB /* ContentView.swift */; };
 		8C6150312B6A0DD700245BDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C6150302B6A0DD700245BDB /* Assets.xcassets */; };
 		8C6150342B6A0DD700245BDB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C6150332B6A0DD700245BDB /* Preview Assets.xcassets */; };
+		8C61503E2B6A336100245BDB /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C61503D2B6A336100245BDB /* WelcomeView.swift */; };
+		8C6481A82B6CA8F6007AC6D0 /* ScheduleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6481A72B6CA8F6007AC6D0 /* ScheduleListView.swift */; };
+		8C6481AA2B6CA9EC007AC6D0 /* CurrentSchedulesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6481A92B6CA9EC007AC6D0 /* CurrentSchedulesModel.swift */; };
+		8C6481AC2B6CB97B007AC6D0 /* ScheduleRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6481AB2B6CB97B007AC6D0 /* ScheduleRowView.swift */; };
+		8C7374402B6C3F4900DEFE53 /* TeamStandingRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C73743F2B6C3F4900DEFE53 /* TeamStandingRowView.swift */; };
+		8C7374442B6C464B00DEFE53 /* CurrentStandingConstructorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7374432B6C464B00DEFE53 /* CurrentStandingConstructorModel.swift */; };
+		8C7374482B6C4BEB00DEFE53 /* TeamsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7374472B6C4BEB00DEFE53 /* TeamsListView.swift */; };
+		8CCC62562B6B11DD00031F73 /* RowCellPilotLeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCC62552B6B11DD00031F73 /* RowCellPilotLeader.swift */; };
+		8CCC62582B6B1B0B00031F73 /* PilotsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCC62572B6B1B0B00031F73 /* PilotsListView.swift */; };
+		8CEE7B0B2B6B75E4001AAECD /* CurrentStandingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEE7B0A2B6B75E4001AAECD /* CurrentStandingModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C2F282D2B6B1E5E00D51AB9 /* PilotDrivers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PilotDrivers.swift; sourceTree = "<group>"; };
+		8C2F282F2B6B4C5D00D51AB9 /* HTTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPViewController.swift; sourceTree = "<group>"; };
 		8C6150292B6A0DC900245BDB /* F de Formula.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "F de Formula.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C61502C2B6A0DC900245BDB /* F_de_FormulaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = F_de_FormulaApp.swift; sourceTree = "<group>"; };
 		8C61502E2B6A0DC900245BDB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8C6150302B6A0DD700245BDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C6150332B6A0DD700245BDB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8C61503D2B6A336100245BDB /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		8C6481A72B6CA8F6007AC6D0 /* ScheduleListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleListView.swift; sourceTree = "<group>"; };
+		8C6481A92B6CA9EC007AC6D0 /* CurrentSchedulesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentSchedulesModel.swift; sourceTree = "<group>"; };
+		8C6481AB2B6CB97B007AC6D0 /* ScheduleRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleRowView.swift; sourceTree = "<group>"; };
+		8C73743F2B6C3F4900DEFE53 /* TeamStandingRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamStandingRowView.swift; sourceTree = "<group>"; };
+		8C7374432B6C464B00DEFE53 /* CurrentStandingConstructorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentStandingConstructorModel.swift; sourceTree = "<group>"; };
+		8C7374472B6C4BEB00DEFE53 /* TeamsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsListView.swift; sourceTree = "<group>"; };
+		8CCC62552B6B11DD00031F73 /* RowCellPilotLeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowCellPilotLeader.swift; sourceTree = "<group>"; };
+		8CCC62572B6B1B0B00031F73 /* PilotsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PilotsListView.swift; sourceTree = "<group>"; };
+		8CEE7B0A2B6B75E4001AAECD /* CurrentStandingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentStandingModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +75,9 @@
 		8C61502B2B6A0DC900245BDB /* F de Formula */ = {
 			isa = PBXGroup;
 			children = (
+				8C61503C2B6A334B00245BDB /* VideModel */,
+				8C61503B2B6A334800245BDB /* Model */,
+				8C61503A2B6A334400245BDB /* View */,
 				8C61502C2B6A0DC900245BDB /* F_de_FormulaApp.swift */,
 				8C61502E2B6A0DC900245BDB /* ContentView.swift */,
 				8C6150302B6A0DD700245BDB /* Assets.xcassets */,
@@ -65,6 +92,63 @@
 				8C6150332B6A0DD700245BDB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8C61503A2B6A334400245BDB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8C6481A62B6CA8DE007AC6D0 /* Schedule */,
+				8C73743E2B6C3F2C00DEFE53 /* Teams */,
+				8CCC62542B6B119D00031F73 /* Drivers */,
+				8C61503D2B6A336100245BDB /* WelcomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8C61503B2B6A334800245BDB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8C2F282D2B6B1E5E00D51AB9 /* PilotDrivers.swift */,
+				8CEE7B0A2B6B75E4001AAECD /* CurrentStandingModel.swift */,
+				8C7374432B6C464B00DEFE53 /* CurrentStandingConstructorModel.swift */,
+				8C6481A92B6CA9EC007AC6D0 /* CurrentSchedulesModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8C61503C2B6A334B00245BDB /* VideModel */ = {
+			isa = PBXGroup;
+			children = (
+				8C2F282F2B6B4C5D00D51AB9 /* HTTPViewController.swift */,
+			);
+			path = VideModel;
+			sourceTree = "<group>";
+		};
+		8C6481A62B6CA8DE007AC6D0 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				8C6481A72B6CA8F6007AC6D0 /* ScheduleListView.swift */,
+				8C6481AB2B6CB97B007AC6D0 /* ScheduleRowView.swift */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
+		8C73743E2B6C3F2C00DEFE53 /* Teams */ = {
+			isa = PBXGroup;
+			children = (
+				8C73743F2B6C3F4900DEFE53 /* TeamStandingRowView.swift */,
+				8C7374472B6C4BEB00DEFE53 /* TeamsListView.swift */,
+			);
+			path = Teams;
+			sourceTree = "<group>";
+		};
+		8CCC62542B6B119D00031F73 /* Drivers */ = {
+			isa = PBXGroup;
+			children = (
+				8CCC62572B6B1B0B00031F73 /* PilotsListView.swift */,
+				8CCC62552B6B11DD00031F73 /* RowCellPilotLeader.swift */,
+			);
+			path = Drivers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +221,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C6481AC2B6CB97B007AC6D0 /* ScheduleRowView.swift in Sources */,
+				8C2F28302B6B4C5D00D51AB9 /* HTTPViewController.swift in Sources */,
+				8C7374402B6C3F4900DEFE53 /* TeamStandingRowView.swift in Sources */,
+				8C6481AA2B6CA9EC007AC6D0 /* CurrentSchedulesModel.swift in Sources */,
+				8C7374482B6C4BEB00DEFE53 /* TeamsListView.swift in Sources */,
+				8CEE7B0B2B6B75E4001AAECD /* CurrentStandingModel.swift in Sources */,
+				8C2F282E2B6B1E5E00D51AB9 /* PilotDrivers.swift in Sources */,
+				8C7374442B6C464B00DEFE53 /* CurrentStandingConstructorModel.swift in Sources */,
 				8C61502F2B6A0DC900245BDB /* ContentView.swift in Sources */,
+				8C6481A82B6CA8F6007AC6D0 /* ScheduleListView.swift in Sources */,
+				8CCC62582B6B1B0B00031F73 /* PilotsListView.swift in Sources */,
+				8CCC62562B6B11DD00031F73 /* RowCellPilotLeader.swift in Sources */,
+				8C61503E2B6A336100245BDB /* WelcomeView.swift in Sources */,
 				8C61502D2B6A0DC900245BDB /* F_de_FormulaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,8 +373,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,8 +400,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
