@@ -15,7 +15,7 @@ struct ScheduleRowView: View {
         
         Button(action: {
             
-        
+        print(raceSchedule)
             
         }, label: {
             
@@ -48,7 +48,7 @@ struct ScheduleRowView: View {
                         .minimumScaleFactor(0.8)
                     
                     
-                    Text(raceSchedule.Circuit.circuitName + "Grand Prix " + raceSchedule.season)
+                    Text(raceSchedule.Circuit.circuitName + " Grand Prix " + raceSchedule.season)
                         .multilineTextAlignment(.trailing)
                     
                 }
