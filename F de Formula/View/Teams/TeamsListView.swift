@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TeamsListView: View {
+    
     @StateObject private var viewModel = HTTPViewController()
 
     

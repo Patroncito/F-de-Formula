@@ -12,35 +12,57 @@ struct ScheduleRowView: View {
 
     var body: some View {
         
-        HStack{
-            Spacer()
-            Text(raceSchedule.Circuit.circuitName)
-                .bold()
-                .font(.largeTitle)
-                .lineLimit(1)
-                .minimumScaleFactor(0.8)
-                .padding(.horizontal)
-            Spacer()
-
-        }
-        .foregroundStyle(.white)
-        .frame(height: 120)
-        .background(
-            ZStack{
-                
-                Image(raceSchedule.Circuit.circuitId)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(height: 120, alignment: .bottom)
-              
-                Color.color3.opacity(0.65)
-                
-            }
-            
-
-        )
-        .clipShape(RoundedRectangle(cornerRadius: 16))
         
+        Button(action: {
+            
+        
+            
+        }, label: {
+            
+            
+            
+            
+            HStack{
+                
+                Text(separateDateinFormat(date: raceSchedule.date)?.joined(separator: "-") ?? "Error al separar la fecha")
+
+                Spacer()
+
+                VStack(alignment: .trailing) {
+                    Text(raceSchedule.Circuit.Location.country)
+                        .bold()
+                        .font(.largeTitle)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.8)
+                    
+                    
+                    Text(raceSchedule.Circuit.circuitName + "Grand Prix " + raceSchedule.season)
+                        .multilineTextAlignment(.trailing)
+                    
+                }
+                .padding(.trailing)
+
+
+            }
+            .foregroundStyle(.white)
+            .frame(height: 120)
+            .background(
+                ZStack{
+                    
+                    Image(raceSchedule.Circuit.circuitId)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(height: 120, alignment: .bottom)
+                  
+                    Color.color3.opacity(0.65)
+                    
+                }
+                
+
+            )
+            .clipShape(RoundedRectangle(cornerRadius: 16))
+
+        })
     }
 }
 
@@ -56,3 +78,16 @@ let circuits = Circuit_races(circuitId: "jeddah", url: "sfas", circuitName: "Jed
 let location = Location_races(lat: "21.6319", long: "39.1044", locality: "Jeddah", country: "Saudi Arabia")
 
 let Practice = Practice_races(date: "2023-03-17", time: "13:30:00Z")
+
+
+
+
+
+
+
+func separateDateinFormat(date: String) -> [String]? {
+    let array = date.components(separatedBy: "-")
+    var newData : [String] = []
+    newData.append(contentsOf: [array[1], array[2]])
+    return newData
+}

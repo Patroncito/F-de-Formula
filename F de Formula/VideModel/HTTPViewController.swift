@@ -83,7 +83,7 @@ final class HTTPViewController : ObservableObject {
             
             
             try await MainActor.run{
-                currentSchedule = try decoder.decode(MRData_races.self, from: data)
+                currentStandingConstructor = try decoder.decode(CurrentStandingConstructorMRData.self, from: data)
             }
             
         } catch{

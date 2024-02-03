@@ -28,11 +28,13 @@ struct TeamStandingRowView: View {
                     
                             VStack(alignment: .trailing){
                                 
-                                if teamConstructor.position == "1" {
+                                if (teamConstructor.position == "1" || teamConstructor.position == "2" || teamConstructor.position == "3")  {
                                     Image(teamConstructor.Constructor.constructorId)
                                     .resizable()
-                                    .frame(minWidth: 0 , maxWidth: 120, minHeight: 0, maxHeight: 60)
                                     .scaledToFit()
+                                    .frame(minWidth: 0 , maxWidth: 100, minHeight: 0, maxHeight: 60)
+                                    .scaledToFit()
+                                    .padding(.top, 10)
                                   
                                 }
                                
@@ -52,8 +54,8 @@ struct TeamStandingRowView: View {
                             .bold()
                             .foregroundStyle(.white)
                             .frame(minWidth: 0, maxWidth: 70)
-                            .frame(minHeight: 0, maxHeight: teamConstructor.position == "1" ? 160 : 100)
-                            .background(.color1)
+                            .frame(minHeight: 0, maxHeight: teamConstructor.position == "1" || teamConstructor.position == "2" || teamConstructor.position == "3" ? 160 : 100)
+                            .background(Color(teamConstructor.Constructor.constructorId))
 
                     }
                 
@@ -70,7 +72,7 @@ struct TeamStandingRowView: View {
                 
             }
             .frame(minWidth: 0 , maxWidth: .infinity)
-            .frame(height: teamConstructor.position == "1" ? 160 : 100)
+            .frame(height: teamConstructor.position == "1" || teamConstructor.position == "2" || teamConstructor.position == "3" ? 160 : 100)
 
             .clipShape(RoundedRectangle(cornerRadius: 20))
 
