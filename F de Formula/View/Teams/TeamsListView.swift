@@ -31,7 +31,10 @@ struct TeamsListView: View {
                         }
                         
                     } else {
-                        TeamStandingRowView(teamConstructor: teamPlaceHolder)
+                        ForEach(0..<8) {item in
+                            TeamStandingRowView(teamConstructor: teamPlaceHolder)
+                                .redacted(reason: .placeholder)
+                        }
 
                     }
                     

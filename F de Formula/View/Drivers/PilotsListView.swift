@@ -26,7 +26,7 @@ struct PilotsListView: View {
                                 let array = standingsLists[index]
                                 ForEach(array.DriverStandings, id: \.position) { item in
                                   
-                                    let updatedURL = viewController.changeSizeImageURL(in: viewController.imageDriver?[0].headshotUrl ?? "", with: "5col")
+                                    let updatedURL = viewController.changeSizeImageURL(in: viewController.imageDriver?[0].headshotUrl ?? "", with: "4col")
 
                                     RowCellPilotLeader(driver2: item, url: updatedURL)
                                     
@@ -34,8 +34,12 @@ struct PilotsListView: View {
                             }
                             
                         } else {
-                            ProgressView()
-                            Text("Loading Drivers...")
+                            
+                            ForEach(0 ..< 8) { item in
+                                RowCellPilotLeader(driver2: driverPlaceholder, url: "")
+                                    .redacted(reason: .placeholder)
+                            }
+
                         }
                     }
                     .padding(.horizontal)

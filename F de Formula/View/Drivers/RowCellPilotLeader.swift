@@ -39,8 +39,7 @@ struct RowCellPilotLeader: View {
                                 Image("driverPlaceholder")
                                     .resizable()
                                     .frame(width: 140, height: 140)
-                                    .foregroundStyle(.black)
-                                    .foregroundStyle(.yellow)
+                                    .foregroundStyle(.black.opacity(0.4))
                             }
                         }
                         
@@ -139,7 +138,7 @@ struct RowCellPilotLeader: View {
 
 #Preview {
     
-    RowCellPilotLeader(driver2: driverstanding )
+    RowCellPilotLeader(driver2: driverPlaceholder )
 }
 
 
@@ -147,9 +146,9 @@ let thissss = header(xmlns: "", series: "f1", url: "", limit: "", offset: "", to
 
 let standingTable = StandingsTable(season: "2023", StandingsLists: [standingList])
 
-let standingList = StandingsList(season: "2023", round: "22", DriverStandings: [driverstanding])
+let standingList = StandingsList(season: "2023", round: "22", DriverStandings: [driverPlaceholder])
 
-let driverstanding = DriverStanding(position: "1", positionText: "1", points: "234", wins: "22", Driver: driver, Constructors: [constructor])
+let driverPlaceholder = DriverStanding(position: "1", positionText: "1", points: "234", wins: "22", Driver: driver, Constructors: [constructor])
 
 
 let driver = Driver_currentStanding(driverId: "verst", permanentNumber: "44", code: "VER", url: "", givenName: "Max", familyName: "Verstappen", dateOfBirth: "1990-01-26", nationality: "Dutch")
