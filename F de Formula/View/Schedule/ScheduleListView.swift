@@ -24,7 +24,12 @@ struct ScheduleListView: View {
                         }
                         
                     } else {
-                        Text("Loading Schedule")
+                          
+                        ForEach(0 ..< 8) { item in
+                            ScheduleRowView(raceSchedule: scheduleItem?[0] ?? raceTemporalModel)
+                                .redacted(reason: .placeholder)
+                        }
+
                     }
                 }
                 .padding(.horizontal, 10)

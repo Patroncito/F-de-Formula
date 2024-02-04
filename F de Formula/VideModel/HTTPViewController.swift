@@ -156,6 +156,17 @@ final class HTTPViewController : ObservableObject {
         case invalidData
     }
     
+    
+    
+    
+    
+    func changeSizeImageURL(in urlString: String, with newTransformValue: String) -> String {
+        let updatedURL = urlString.replacingOccurrences(of: "1col", with: newTransformValue)
+        return updatedURL
+    }
+
+
 }
+
 
 

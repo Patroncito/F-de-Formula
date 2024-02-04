@@ -79,10 +79,10 @@ struct ScheduleRowView: View {
 }
 
 #Preview(traits: .sizeThatFitsLayout) {
-    ScheduleRowView(raceSchedule: race).fixedSize()
+    ScheduleRowView(raceSchedule: raceTemporalModel).fixedSize()
 }
 
-let race = Race_races(season: "2023", round: "1", url: "urlasdad", raceName: "Saudi Arabian Grand Prix", Circuit: circuits, date: "2023-01-19", time: "7:00:00Z", FirstPractice: Practice, SecondPractice: Practice, ThirdPractice: Practice, Qualifying: Practice)
+let raceTemporalModel = Race_races(season: "2023", round: "1", url: "urlasdad", raceName: "Saudi Arabian Grand Prix", Circuit: circuits, date: "2023-01-19", time: "7:00:00Z", FirstPractice: Practice, SecondPractice: Practice, ThirdPractice: Practice, Qualifying: Practice)
 
 let circuits = Circuit_races(circuitId: "jeddah", url: "sfas", circuitName: "Jeddah Corniche Circuit", Location: location)
 

@@ -26,7 +26,9 @@ struct PilotsListView: View {
                                 let array = standingsLists[index]
                                 ForEach(array.DriverStandings, id: \.position) { item in
                                   
-                                    RowCellPilotLeader(driver2: item, url: viewController.imageDriver?[0].headshotUrl)
+                                    let updatedURL = viewController.changeSizeImageURL(in: viewController.imageDriver?[0].headshotUrl ?? "", with: "5col")
+
+                                    RowCellPilotLeader(driver2: item, url: updatedURL)
                                     
                                 }
                             }
@@ -46,7 +48,7 @@ struct PilotsListView: View {
                             let permanentNumber = viewController.currentStandingDrivers?.MRData.StandingsTable.StandingsLists[0].DriverStandings[0].Driver.permanentNumber
                             
                             if permanentNumber == "33" {
-                                try await viewController.getImageDriver(idDriver: "14")
+                                try await viewController.getImageDriver(idDriver: "1")
 
                             } else {
                                 try await viewController.getImageDriver(idDriver: permanentNumber ?? "")
@@ -85,3 +87,5 @@ struct PilotsListView: View {
 #Preview {
     PilotsListView()
 }
+
+
