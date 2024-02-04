@@ -11,8 +11,8 @@ struct RowCellPilotLeader: View {
     
     //var driver : MRData_CurrentStanding
     var driver2 : DriverStanding
+    var url : String?
     
-    var imageUrl = URL(string: "https://www.formula1.com/content/dam/fom-website/drivers/M/MAXVER01_Max_Verstappen/maxver01.png.transform/2col/image.png")
     
     var body: some View {
         
@@ -29,14 +29,17 @@ struct RowCellPilotLeader: View {
                         
                         
                         if driver2.position == "1" {
-                            AsyncImage(url: imageUrl) { image in
+                            let url = URL(string: url ?? "")
+                            AsyncImage(url: url) { image in
                                 image
                                     .resizable()
                                     .frame(width: 140, height: 140)
                                     .aspectRatio(contentMode: .fit)
                             } placeholder: {
-                                Circle()
-                                    .frame(width: 80)
+                                Image("driverPlaceholder")
+                                    .resizable()
+                                    .frame(width: 140, height: 140)
+                                    .foregroundStyle(.black)
                                     .foregroundStyle(.yellow)
                             }
                         }
@@ -130,6 +133,7 @@ struct RowCellPilotLeader: View {
         })
         
         
+        
     }
 }
 
@@ -148,6 +152,6 @@ let standingList = StandingsList(season: "2023", round: "22", DriverStandings: [
 let driverstanding = DriverStanding(position: "1", positionText: "1", points: "234", wins: "22", Driver: driver, Constructors: [constructor])
 
 
-let driver = Driver_currentStanding(driverId: "verst", permanentNumber: "1", code: "VER", url: "", givenName: "Max", familyName: "Verstappen", dateOfBirth: "1990-01-26", nationality: "Dutch")
+let driver = Driver_currentStanding(driverId: "verst", permanentNumber: "44", code: "VER", url: "", givenName: "Max", familyName: "Verstappen", dateOfBirth: "1990-01-26", nationality: "Dutch")
 
 let constructor = Constructor(constructorId: "mercedes", url: "", name: "Red Bull Racing", nationality: "Austrian")

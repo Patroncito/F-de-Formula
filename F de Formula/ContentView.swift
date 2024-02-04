@@ -38,7 +38,7 @@ struct ContentView: View {
                 ScheduleListView()
                     .tabItem {
                         
-                        Label("Schedule", systemImage: "calendar")
+                        Label("Schedule", image: "flags")
 
                     }
                 

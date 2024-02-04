@@ -14,6 +14,7 @@ final class HTTPViewController : ObservableObject {
     @Published var currentStandingDrivers : CurrentStandingDriversMRData?
     @Published var currentStandingConstructor : CurrentStandingConstructorMRData?
     @Published var currentSchedule : MRData_races?
+    @Published var imageDriver : [DriverImage]?
 
  
     
@@ -35,6 +36,35 @@ final class HTTPViewController : ObservableObject {
             throw F1Error.invalidData
         }
    
+    }
+    
+    
+    func getImageDriver(idDriver : String) async throws {
+        
+        let endpoint = "https://api.openf1.org/v1/drivers?driver_number=\(idDriver)&session_key=9158"
+        
+        print("endpoint : " + endpoint)
+        print("Number Driver :" + idDriver)
+        
+        guard let url = URL(string: endpoint) else { throw F1Error.invalidURL}
+        
+        let (data, response) = try await URLSession.shared.data(from: url)
+        
+        guard let response = response as? HTTPURLResponse, response.statusCode == 200 else { throw F1Error.invalidResponse}
+        
+        do {
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            try await MainActor.run {
+                imageDriver =  try  decoder.decode([DriverImage].self, from: data)
+            }
+        } catch {
+            throw F1Error.invalidData
+        }
+
+        
+        
+        
     }
     
     

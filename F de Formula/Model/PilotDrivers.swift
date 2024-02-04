@@ -40,3 +40,17 @@ struct Driver: Codable {
 
 
 
+struct DriverImage: Codable {
+ 
+    let headshotUrl: String?
+   
+    
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        headshotUrl = try container.decodeIfPresent(String.self, forKey: .headshotUrl)
+     
+    }
+
+}

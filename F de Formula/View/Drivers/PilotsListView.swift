@@ -26,7 +26,8 @@ struct PilotsListView: View {
                                 let array = standingsLists[index]
                                 ForEach(array.DriverStandings, id: \.position) { item in
                                   
-                                    RowCellPilotLeader(driver2: item)
+                                    RowCellPilotLeader(driver2: item, url: viewController.imageDriver?[0].headshotUrl)
+                                    
                                 }
                             }
                             
@@ -39,7 +40,23 @@ struct PilotsListView: View {
                 
                 .onAppear{
                     Task {
-                        try await viewController.getCurrentStandingDrivers()
+                        do {
+                            try await viewController.getCurrentStandingDrivers()
+                            
+                            let permanentNumber = viewController.currentStandingDrivers?.MRData.StandingsTable.StandingsLists[0].DriverStandings[0].Driver.permanentNumber
+                            
+                            if permanentNumber == "33" {
+                                try await viewController.getImageDriver(idDriver: "14")
+
+                            } else {
+                                try await viewController.getImageDriver(idDriver: permanentNumber ?? "")
+
+                            }
+                            
+                        } catch  let error {
+                            print("List View Error : \(error)")
+                            
+                        }
                     }
             }
                 .navigationTitle("Drivers")
@@ -63,7 +80,6 @@ struct PilotsListView: View {
     }
     
 }
-
 
 
 #Preview {
