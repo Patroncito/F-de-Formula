@@ -26,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C2634E52B6F118000171D54 /* F-de-Formula-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "F-de-Formula-Info.plist"; sourceTree = SOURCE_ROOT; };
 		8C2F282D2B6B1E5E00D51AB9 /* PilotDrivers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PilotDrivers.swift; sourceTree = "<group>"; };
 		8C2F282F2B6B4C5D00D51AB9 /* HTTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPViewController.swift; sourceTree = "<group>"; };
 		8C6150292B6A0DC900245BDB /* F de Formula.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "F de Formula.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +76,7 @@
 		8C61502B2B6A0DC900245BDB /* F de Formula */ = {
 			isa = PBXGroup;
 			children = (
+				8C2634E52B6F118000171D54 /* F-de-Formula-Info.plist */,
 				8C61503C2B6A334B00245BDB /* VideModel */,
 				8C61503B2B6A334800245BDB /* Model */,
 				8C61503A2B6A334400245BDB /* View */,
@@ -370,10 +372,13 @@
 				DEVELOPMENT_ASSET_PATHS = "\"F de Formula/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "F-de-Formula-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -397,10 +402,13 @@
 				DEVELOPMENT_ASSET_PATHS = "\"F de Formula/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "F-de-Formula-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

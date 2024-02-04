@@ -8,31 +8,67 @@
 import SwiftUI
 
 struct ContentView: View {
+    init() {
+        UITabBar.appearance().barTintColor = UIColor.color3
+    }
     var body: some View {
         
         
-        
-        TabView{
             
-            TeamsListView()
-                .tabItem {
-                    Label("Teams", systemImage: "wrench.and.screwdriver")
-                }
-            PilotsListView()
-                .tabItem {
-                    Label("Drivers", systemImage: "person.3")
-                }
-            
-            ScheduleListView()
-                .tabItem {
-                    Label("Schedule", systemImage: "calendar")
+      
+      
+            TabView {
+                
+                TeamsListView()
+                    .tabItem {
+                        Image("circuit")
+                        Text("Teams")
+                            
+                    }
+                PilotsListView()
+                    .tabItem {
+                        Image("helmet")
+                            .resizable()
+                            .frame(width: 30, height:30)
+                        Text("Drivers")
+                        
+                        
+                    }
+                
+                ScheduleListView()
+                    .tabItem {
+                        
+                        Label("Schedule", systemImage: "calendar")
 
-                }
-            
-        }
+                    }
+                
+            }
+            .tint(.color1)
+        
+        
+
+
+        
+      
     }
 }
 
 #Preview {
     ContentView()
 }
+
+//.navigationTitle("Drivers")
+//    .foregroundStyle(.white)
+//    .toolbarColorScheme(.dark)
+//    .navigationBarTitleDisplayMode(.inline)
+//    .toolbarBackground(Color.color1)
+//    .toolbar{
+//        Button(action: {
+//            print("Button 1")
+//        }, label: {
+//            Image(systemName: "steeringwheel")
+//                .foregroundColor(.white)
+//                .scaledToFit()
+//            
+//        })
+//    }
