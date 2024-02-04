@@ -84,11 +84,11 @@ struct TeamStandingRowView: View {
 
 #Preview {
     
-    TeamStandingRowView(teamConstructor: team)
+    TeamStandingRowView(teamConstructor: teamPlaceHolder)
 }
 
 
 
-let team = ConstructorStanding_currentConstructor(position: "2", positionText: "1", points: "344", wins: "12", Constructor: constructor2)
+let teamPlaceHolder = ConstructorStanding_currentConstructor(position: "2", positionText: "1", points: "344", wins: "12", Constructor: constructor2)
 
 let constructor2 = Constructor_currentConstructor(constructorId: "red_bull", url: "", name: "Patron F1 Team", nationality: "Austrian")

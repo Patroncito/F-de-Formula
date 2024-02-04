@@ -31,7 +31,8 @@ struct TeamsListView: View {
                         }
                         
                     } else {
-                        Text("Loading Data...")
+                        TeamStandingRowView(teamConstructor: teamPlaceHolder)
+
                     }
                     
                     
