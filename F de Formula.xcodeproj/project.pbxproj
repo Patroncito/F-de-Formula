@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C17AD042B704EFD00C3EE36 /* DriverDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C17AD032B704EFD00C3EE36 /* DriverDetailsView.swift */; };
 		8C2F282E2B6B1E5E00D51AB9 /* PilotDrivers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2F282D2B6B1E5E00D51AB9 /* PilotDrivers.swift */; };
 		8C2F28302B6B4C5D00D51AB9 /* HTTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2F282F2B6B4C5D00D51AB9 /* HTTPViewController.swift */; };
 		8C61502D2B6A0DC900245BDB /* F_de_FormulaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C61502C2B6A0DC900245BDB /* F_de_FormulaApp.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C17AD032B704EFD00C3EE36 /* DriverDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailsView.swift; sourceTree = "<group>"; };
 		8C2634E52B6F118000171D54 /* F-de-Formula-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "F-de-Formula-Info.plist"; sourceTree = SOURCE_ROOT; };
 		8C2F282D2B6B1E5E00D51AB9 /* PilotDrivers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PilotDrivers.swift; sourceTree = "<group>"; };
 		8C2F282F2B6B4C5D00D51AB9 /* HTTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 			children = (
 				8CCC62572B6B1B0B00031F73 /* PilotsListView.swift */,
 				8CCC62552B6B11DD00031F73 /* RowCellPilotLeader.swift */,
+				8C17AD032B704EFD00C3EE36 /* DriverDetailsView.swift */,
 			);
 			path = Drivers;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				8C6481AC2B6CB97B007AC6D0 /* ScheduleRowView.swift in Sources */,
 				8C2F28302B6B4C5D00D51AB9 /* HTTPViewController.swift in Sources */,
 				8C7374402B6C3F4900DEFE53 /* TeamStandingRowView.swift in Sources */,
+				8C17AD042B704EFD00C3EE36 /* DriverDetailsView.swift in Sources */,
 				8C6481AA2B6CA9EC007AC6D0 /* CurrentSchedulesModel.swift in Sources */,
 				8C7374482B6C4BEB00DEFE53 /* TeamsListView.swift in Sources */,
 				8CEE7B0B2B6B75E4001AAECD /* CurrentStandingModel.swift in Sources */,

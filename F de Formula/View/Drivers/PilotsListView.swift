@@ -28,6 +28,7 @@ struct PilotsListView: View {
                                   
                                     let updatedURL = viewController.changeSizeImageURL(in: viewController.imageDriver?[0].headshotUrl ?? "", with: "4col")
 
+                                    
                                     RowCellPilotLeader(driver2: item, url: updatedURL)
                                     
                                 }

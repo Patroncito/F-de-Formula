@@ -17,9 +17,7 @@ struct RowCellPilotLeader: View {
     var body: some View {
         
         
-        Button(action: {
-            print(driver2.Driver)
-        }, label: {
+        NavigationLink(destination: DriverDetailsView()) {
             ZStack() {
                 Color(.color3)
                 
@@ -129,8 +127,7 @@ struct RowCellPilotLeader: View {
             .frame(minWidth: 0 , maxWidth: .infinity, minHeight: 0, maxHeight: driver2.position == "1" ? 140 : 90)
             .clipShape(RoundedRectangle(cornerRadius: 20))
 
-        })
-        
+        }
         
         
     }
