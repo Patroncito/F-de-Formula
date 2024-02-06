@@ -54,3 +54,17 @@ struct DriverImage: Codable {
     }
 
 }
+
+
+struct DriverExtraData : Codable {
+    
+    let season : String
+    let driver : [DataDriver]
+
+}
+
+struct DataDriver : Codable {
+    let id : String
+    let placeofborn : String
+    let worldchampions : String
+}

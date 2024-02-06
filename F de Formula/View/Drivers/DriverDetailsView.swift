@@ -8,6 +8,14 @@
 import SwiftUI
 
 struct DriverDetailsView: View {
+    
+    var driver2 : DriverStanding
+    var url1 : String?
+    var DataDriver : DataDriver
+
+    @State var updatedURL  = ""
+    
+    @State var viewModel = HTTPViewController()
     var body: some View {
         
         NavigationStack {
@@ -16,9 +24,10 @@ struct DriverDetailsView: View {
                 //MARK: DRIVER PROFILE IMAGE
                 ZStack (alignment: .topTrailing) {
                     
-                    LinearGradient(colors: [Color.mercedes.opacity(0.7), Color.mercedes], startPoint: .bottom, endPoint: .top)
+                    LinearGradient(colors: [Color(                    Color(driver2.Constructors[0].constructorId)
+                                                 ).opacity(0.7), Color(driver2.Constructors[0].constructorId)], startPoint: .bottom, endPoint: .top)
                     
-                    Image("mercedes")
+                    Image(driver2.Constructors[0].constructorId)
                         .resizable()
                         .scaledToFit()
                         .frame(width: 80, height: 80)
@@ -27,20 +36,34 @@ struct DriverDetailsView: View {
                     
                     ZStack (alignment: .bottom) {
                         
-                        Image("driverPlaceholder")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 380)
-                            .foregroundStyle(.black)
                         
-                        
+                        let url = URL(string: updatedURL )
+
+                        AsyncImage(url: url) { image in
+                            image
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 380)
+                                .foregroundStyle(.black)
+                              
+                        } placeholder: {
+                            Image("driverPlaceholder")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 380)
+                                .foregroundStyle(.black)
+                            
+                        }
+
+
+                                              
                         HStack {
                             
                             Image("uk")
                                 .resizable()
                                 .frame(width: 40, height: 40, alignment: .center)
                             
-                            Text("Lewis Hamilton")
+                            Text(driver2.Driver.givenName + " " + driver2.Driver.familyName)
                                 .font(.largeTitle)
                                 .bold()
                         }
@@ -62,15 +85,15 @@ struct DriverDetailsView: View {
                 HStack {
                     
                     VStack(alignment: .leading){
-                        Text("Country")
+                        Text("Nationality")
                             .font(.subheadline)
-                        Text("United Kindowm")
+                        Text(driver2.Driver.nationality)
                             .font(.headline)
                             .bold()
                     }
                     Spacer()
                     
-                    Text("840 pts")
+                    Text(driver2.points + " pts")
                         .font(.headline)
                         .padding(.horizontal)
                         .padding(.vertical, 10)
@@ -83,7 +106,7 @@ struct DriverDetailsView: View {
                 
                 //MARK: POSITION IN ACTUAL SEASON AND Wold TITTLES
                 HStack(spacing: 10){
-                    Text("5º")
+                    Text(driver2.position + "º")
                         .font(.system(size: 45))
                         .bold()
                     
@@ -96,7 +119,7 @@ struct DriverDetailsView: View {
                         .fontWeight(.light)
                         .font(.footnote)
                     
-                    Text("8")
+                    Text(DataDriver.worldchampions)
                         .font(.system(size: 45))
                         .bold()
                     
@@ -113,7 +136,7 @@ struct DriverDetailsView: View {
                 //MARK: CAR
                 ZStack(alignment: .topTrailing){
                     
-                    Color.mercedes
+                    Color(driver2.Constructors[0].constructorId)
                     
                     VStack(alignment: .trailing, spacing: 40){
                         
@@ -157,15 +180,15 @@ struct DriverDetailsView: View {
                 ZStack(alignment: .leading){
                     
                     Color(.color3)
-                    
+
                     VStack(alignment: .leading, spacing: 20){
                         
                         VStack(alignment: .leading, spacing: 2) {
-                            Text("Nationality")
+                            Text("Place of Born")
                                 .fontWeight(.light)
                                 .font(.footnote)
                                 
-                            Text("British")
+                            Text(DataDriver.placeofborn)
                                 .font(.title)
                                 .bold()
                         }
@@ -174,12 +197,11 @@ struct DriverDetailsView: View {
                             Text("Date of birth")
                                 .fontWeight(.light)
                                 .font(.footnote)
-                            Text("1985-01-07") // Change to DD/MM/YYYY
+                            Text(viewModel.convertDateFormat(inputDate: driver2.Driver.dateOfBirth)) // Change to DD/MM/YYYY
                                 .font(.title)
                                 .bold()
                         }
                         
-
                     }
                     .padding(.horizontal, 20)
                     .padding(.vertical, 40)
@@ -210,7 +232,7 @@ struct DriverDetailsView: View {
                     .padding(.bottom, 20)
             
                 
-            }.navigationTitle("Lewis Hamilton")
+            }.navigationTitle(driver2.Driver.givenName + " " + driver2.Driver.familyName)
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbarBackground(Color.color1)
                 .toolbar{
@@ -223,13 +245,40 @@ struct DriverDetailsView: View {
                         
                     })
             }
+            
+                .onAppear{
+                    Task {
+                        do {
+                          
+                            
+                            let permanentNumber = driver2.Driver.permanentNumber
+                            if permanentNumber == "33" {
+                                try await viewModel.getImageDriver(idDriver: "1")
+                                updatedURL = viewModel.changeSizeImageURL(in: viewModel.imageDriver?[0].headshotUrl ?? "", with: "4col")}
+                                else if permanentNumber == "3" || permanentNumber == "21" {
+                                    updatedURL = ""
+                                } else {
+                                    try await viewModel.getImageDriver(idDriver: permanentNumber)
+                                
+                                updatedURL = viewModel.changeSizeImageURL(in: viewModel.imageDriver?[0].headshotUrl ?? "", with: "4col")
+
+                                }
+                              
+                            
+                            
+                        } catch  let error {
+                            print("List View Error : \(error)")
+                            
+                        }
+                    }
+            }
         }
         
     }
 }
 
 #Preview {
-    DriverDetailsView()
+    DriverDetailsView(driver2: driverPlaceholder, DataDriver: DriverExtra[0])
 }
 
 

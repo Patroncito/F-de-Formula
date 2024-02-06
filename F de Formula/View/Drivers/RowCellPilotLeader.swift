@@ -12,12 +12,13 @@ struct RowCellPilotLeader: View {
     //var driver : MRData_CurrentStanding
     var driver2 : DriverStanding
     var url : String?
+    var DataDriver : DataDriver
     
     
     var body: some View {
         
         
-        NavigationLink(destination: DriverDetailsView()) {
+        NavigationLink(destination: DriverDetailsView(driver2: driver2, url1: url, DataDriver: DataDriver)) {
             ZStack() {
                 Color(.color3)
                 
@@ -135,7 +136,7 @@ struct RowCellPilotLeader: View {
 
 #Preview {
     
-    RowCellPilotLeader(driver2: driverPlaceholder )
+    RowCellPilotLeader(driver2: driverPlaceholder, DataDriver: DriverExtra[0])
 }
 
 
@@ -150,4 +151,10 @@ let driverPlaceholder = DriverStanding(position: "1", positionText: "1", points:
 
 let driver = Driver_currentStanding(driverId: "verst", permanentNumber: "44", code: "VER", url: "", givenName: "Max", familyName: "Verstappen", dateOfBirth: "1990-01-26", nationality: "Dutch")
 
-let constructor = Constructor(constructorId: "mercedes", url: "", name: "Red Bull Racing", nationality: "Austrian")
+let constructor = Constructor(constructorId: "ferrari", url: "", name: "Red Bull Racing", nationality: "Austrian")
+
+let extraData = DriverExtraData(season: "Empty", driver: DriverExtra)
+
+let DriverExtra = [DataDriver(id: "empty", placeofborn: "2000-01-01", worldchampions: "0")]
+
+

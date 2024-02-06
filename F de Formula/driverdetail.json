@@ -1,0 +1,117 @@
+{
+  "season": "2023",
+  "driver": [
+    {
+      "id": "max_verstappen",
+      "placeofborn": "Hasselt, Belgium",
+      "worldchampions": "3"
+    },
+    {
+        "id": "perez",
+        "placeofborn": "Guadalajara, México",
+        "worldchampions": "0"
+      },
+    {
+      "id": "hamilton",
+      "placeofborn": "Stevenage, England",
+      "worldchampions": "7"
+    },
+    {
+        "id": "alonso",
+        "placeofborn": "Oviedo, Spain",
+        "worldchampions": "2"
+    },
+    {
+        "id": "leclerc",
+        "placeofborn": "Monte Carlo, Monaco",
+        "worldchampions": "0"
+    },
+    {
+        "id": "norris",
+        "placeofborn": "Bristol, England",
+        "worldchampions": "0"
+    },
+    {
+        "id": "sainz",
+        "placeofborn": "Madrid, Spain",
+        "worldchampions": "0"
+    },
+    {
+        "id": "russell",
+        "placeofborn": "King's Lynn, England",
+        "worldchampions": "0"
+    },
+    {
+        "id": "piastri",
+        "placeofborn": "Melbourne, Australia",
+        "worldchampions": "0"
+    },
+    {
+        "id": "stroll",
+        "placeofborn": "Montreal, Canada",
+        "worldchampions": "0"
+    },
+    {
+        "id": "gasly",
+        "placeofborn": "Rouen, France",
+        "worldchampions": "0"
+    },
+    {
+        "id": "ocon",
+        "placeofborn": "Évreux, France",
+        "worldchampions": "0"
+    },
+    {
+        "id": "albon",
+        "placeofborn": "London, England",
+        "worldchampions": "0"
+    },
+    {
+        "id": "tsunoda",
+        "placeofborn": "Sagamihara, Japan",
+        "worldchampions": "0"
+    },
+    {
+        "id": "bottas",
+        "placeofborn": "Nastola, Finland",
+        "worldchampions": "0"
+    },
+    {
+        "id": "hulkenberg",
+        "placeofborn": "Emmerich am Rhein, Germany",
+        "worldchampions": "0"
+    },
+    {
+        "id": "ricciardo",
+        "placeofborn": "Perth, Australia",
+        "worldchampions": "0"
+    },
+    {
+        "id": "zhou",
+        "placeofborn": "Shanghai, China",
+        "worldchampions": "0"
+    },
+    {
+        "id": "kevin_magnussen",
+        "placeofborn": "Roskilde, Denmark",
+        "worldchampions": "0"
+    },
+    
+    {
+        "id": "lawson",
+        "placeofborn": "Hastings, New Zealand",
+        "worldchampions": "0"
+    },
+    
+    {
+        "id": "sargeant",
+        "placeofborn": "Fort Lauderdale, U.S.",
+        "worldchampions": "0"
+    },
+    {
+        "id": "de_vries",
+        "placeofborn": "Uitwellingerga, Netherlands",
+        "worldchampions": "0"
+    }
+  ]
+}

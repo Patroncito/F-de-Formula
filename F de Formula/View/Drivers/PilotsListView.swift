@@ -29,7 +29,7 @@ struct PilotsListView: View {
                                     let updatedURL = viewController.changeSizeImageURL(in: viewController.imageDriver?[0].headshotUrl ?? "", with: "4col")
 
                                     
-                                    RowCellPilotLeader(driver2: item, url: updatedURL)
+                                    RowCellPilotLeader(driver2: item, url: updatedURL, DataDriver: viewController.getDataFromJSONById(id: item.Driver.driverId , extraInfo: viewController.extraDriverData ?? extraData ) ?? DriverExtra[0])
                                     
                                 }
                             }
@@ -37,7 +37,7 @@ struct PilotsListView: View {
                         } else {
                             
                             ForEach(0 ..< 8) { item in
-                                RowCellPilotLeader(driver2: driverPlaceholder, url: "")
+                                RowCellPilotLeader(driver2: driverPlaceholder, url: "", DataDriver: DriverExtra[0])
                                     .redacted(reason: .placeholder)
                             }
 
@@ -49,7 +49,7 @@ struct PilotsListView: View {
                     Task {
                         do {
                             try await viewController.getCurrentStandingDrivers()
-                            
+                            try await viewController.getExtraDriverData(forName: "driverdetail")
                             let permanentNumber = viewController.currentStandingDrivers?.MRData.StandingsTable.StandingsLists[0].DriverStandings[0].Driver.permanentNumber
                             
                             if permanentNumber == "33" {
