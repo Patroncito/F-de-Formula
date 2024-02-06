@@ -4,114 +4,138 @@
     {
       "id": "max_verstappen",
       "placeofborn": "Hasselt, Belgium",
-      "worldchampions": "3"
+      "worldchampions": "3",
+      "country": "netherlands"
     },
     {
         "id": "perez",
         "placeofborn": "Guadalajara, México",
-        "worldchampions": "0"
+        "worldchampions": "0",
+        "country": "mexico"
+        
       },
     {
       "id": "hamilton",
       "placeofborn": "Stevenage, England",
-      "worldchampions": "7"
+      "worldchampions": "7",
+      "country": "uk"
     },
     {
         "id": "alonso",
         "placeofborn": "Oviedo, Spain",
-        "worldchampions": "2"
+        "worldchampions": "2",
+        "country": "spain"
+
     },
     {
         "id": "leclerc",
         "placeofborn": "Monte Carlo, Monaco",
-        "worldchampions": "0"
+        "worldchampions": "0",
+        "country": "monaco"
     },
     {
         "id": "norris",
         "placeofborn": "Bristol, England",
-        "worldchampions": "0"
+        "worldchampions": "0",
+        "country": "uk"
     },
     {
         "id": "sainz",
         "placeofborn": "Madrid, Spain",
-        "worldchampions": "0"
+        "worldchampions": "0",
+        "country": "spain"
     },
     {
         "id": "russell",
         "placeofborn": "King's Lynn, England",
-        "worldchampions": "0"
+        "worldchampions": "0",
+        "country": "uk"
     },
     {
         "id": "piastri",
         "placeofborn": "Melbourne, Australia",
-        "worldchampions": "0"
+        "worldchampions": "0",
+        "country": "australia"
     },
     {
         "id": "stroll",
         "placeofborn": "Montreal, Canada",
-        "worldchampions": "0"
+        "worldchampions": "0",
+        "country": "canada"
     },
     {
         "id": "gasly",
         "placeofborn": "Rouen, France",
-        "worldchampions": "0"
+        "worldchampions": "0",
+        "country": "france"
     },
     {
         "id": "ocon",
         "placeofborn": "Évreux, France",
-        "worldchampions": "0"
+        "worldchampions": "0",
+        "country": "france"
     },
     {
         "id": "albon",
         "placeofborn": "London, England",
-        "worldchampions": "0"
+        "worldchampions": "0",
+        "country": "uk"
     },
     {
         "id": "tsunoda",
         "placeofborn": "Sagamihara, Japan",
-        "worldchampions": "0"
+        "worldchampions": "0",
+        "country": "japan"
     },
     {
         "id": "bottas",
         "placeofborn": "Nastola, Finland",
-        "worldchampions": "0"
+        "worldchampions": "0",
+        "country": "uk"
     },
     {
         "id": "hulkenberg",
         "placeofborn": "Emmerich am Rhein, Germany",
-        "worldchampions": "0"
+        "worldchampions": "0",
+        "country": "uk"
     },
     {
         "id": "ricciardo",
         "placeofborn": "Perth, Australia",
-        "worldchampions": "0"
+        "worldchampions": "0",
+        "country": "australia"
     },
     {
         "id": "zhou",
         "placeofborn": "Shanghai, China",
-        "worldchampions": "0"
+        "worldchampions": "0",
+        "country": "mexico"
     },
     {
         "id": "kevin_magnussen",
         "placeofborn": "Roskilde, Denmark",
-        "worldchampions": "0"
+        "worldchampions": "0",
+        "country": "mexico"
     },
     
     {
         "id": "lawson",
         "placeofborn": "Hastings, New Zealand",
-        "worldchampions": "0"
+        "worldchampions": "0",
+        "country": "australia"
     },
     
     {
         "id": "sargeant",
         "placeofborn": "Fort Lauderdale, U.S.",
-        "worldchampions": "0"
+        "worldchampions": "0",
+        "country": "usa"
     },
     {
         "id": "de_vries",
         "placeofborn": "Uitwellingerga, Netherlands",
-        "worldchampions": "0"
+        "worldchampions": "0",
+        "country": "netherlands"
     }
   ]
 }

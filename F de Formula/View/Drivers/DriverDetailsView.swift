@@ -11,7 +11,7 @@ struct DriverDetailsView: View {
     
     var driver2 : DriverStanding
     var url1 : String?
-    var DataDriver : DataDriver
+    var dataDriver : DataDriver
 
     @State var updatedURL  = ""
     
@@ -25,7 +25,7 @@ struct DriverDetailsView: View {
                 ZStack (alignment: .topTrailing) {
                     
                     LinearGradient(colors: [Color(                    Color(driver2.Constructors[0].constructorId)
-                                                 ).opacity(0.7), Color(driver2.Constructors[0].constructorId)], startPoint: .bottom, endPoint: .top)
+                                                 ).opacity(0.2), Color(driver2.Constructors[0].constructorId)], startPoint: .bottom, endPoint: .top)
                     
                     Image(driver2.Constructors[0].constructorId)
                         .resizable()
@@ -33,6 +33,7 @@ struct DriverDetailsView: View {
                         .frame(width: 80, height: 80)
                         .padding(.trailing, 20)
                         .padding(.top, 20)
+                        .shadow(color: .black.opacity(0.5), radius: 1, x: 0, y: 1)
                     
                     ZStack (alignment: .bottom) {
                         
@@ -55,11 +56,12 @@ struct DriverDetailsView: View {
                             
                         }
 
-
+                        LinearGradient( colors: [Color(                    Color(driver2.Constructors[0].constructorId)
+                                                     ).opacity(0.1), Color(driver2.Constructors[0].constructorId).opacity(0.0)], startPoint: .bottom, endPoint: .top)
                                               
                         HStack {
                             
-                            Image("uk")
+                            Image("flag-\(dataDriver.country)")
                                 .resizable()
                                 .frame(width: 40, height: 40, alignment: .center)
                             
@@ -67,10 +69,13 @@ struct DriverDetailsView: View {
                                 .font(.largeTitle)
                                 .bold()
                         }
+                        .shadow(color: .black, radius: 1.0, x: 0, y: 2)
                         .padding(.bottom, 20)
                         
                         
                     }
+                    
+                    
                     
                 }
                 .frame(height: 450)
@@ -101,7 +106,8 @@ struct DriverDetailsView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 4))
                     
                     
-                }.padding([.vertical, .horizontal], 20)
+                }
+                .padding([.vertical, .horizontal], 20)
                 
                 
                 //MARK: POSITION IN ACTUAL SEASON AND Wold TITTLES
@@ -119,7 +125,7 @@ struct DriverDetailsView: View {
                         .fontWeight(.light)
                         .font(.footnote)
                     
-                    Text(DataDriver.worldchampions)
+                    Text(dataDriver.worldchampions)
                         .font(.system(size: 45))
                         .bold()
                     
@@ -142,19 +148,19 @@ struct DriverDetailsView: View {
                         
                         
                         HStack(alignment: .center) {
-                            Image("mercedes")
+                            Image(driver2.Constructors[0].constructorId)
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 20, height: 20)
                             
-                            Text("Mercedes AMG Petronas F1 Team")
-                                .foregroundStyle(.black)
+                            Text(driver2.Constructors[0].name)
+                                .foregroundStyle(.white)
                                 .bold()
                         }
                         .padding(.top, 20)
                         
                         
-                        Image("car44")
+                        Image("car-\(driver2.Constructors[0].constructorId)")
                             .resizable()
                             .scaledToFit()
                             .padding(.horizontal, 5)
@@ -162,6 +168,7 @@ struct DriverDetailsView: View {
                             .padding(.bottom, 10)
                         
                     }
+                    .shadow(color: .black.opacity(0.5), radius: 0.5, x: 0, y: 2)
                     .padding(.trailing, 20)
                     
                     
@@ -188,7 +195,8 @@ struct DriverDetailsView: View {
                                 .fontWeight(.light)
                                 .font(.footnote)
                                 
-                            Text(DataDriver.placeofborn)
+                            Text(dataDriver.placeofborn)
+                                .minimumScaleFactor(0.7)
                                 .font(.title)
                                 .bold()
                         }
@@ -199,6 +207,7 @@ struct DriverDetailsView: View {
                                 .font(.footnote)
                             Text(viewModel.convertDateFormat(inputDate: driver2.Driver.dateOfBirth)) // Change to DD/MM/YYYY
                                 .font(.title)
+                                .minimumScaleFactor(0.7)
                                 .bold()
                         }
                         
@@ -245,6 +254,8 @@ struct DriverDetailsView: View {
                         
                     })
             }
+                
+
             
                 .onAppear{
                     Task {
@@ -278,7 +289,7 @@ struct DriverDetailsView: View {
 }
 
 #Preview {
-    DriverDetailsView(driver2: driverPlaceholder, DataDriver: DriverExtra[0])
+    DriverDetailsView(driver2: driverPlaceholder, dataDriver: DriverExtra[0])
 }
 
 

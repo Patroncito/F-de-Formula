@@ -67,4 +67,5 @@ struct DataDriver : Codable {
     let id : String
     let placeofborn : String
     let worldchampions : String
+    let country : String
 }

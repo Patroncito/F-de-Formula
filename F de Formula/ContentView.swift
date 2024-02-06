@@ -23,17 +23,18 @@ struct ContentView: View {
                     .tabItem {
                         Image("circuit")
                         Text("Teams")
-                            
                     }
+                    
+                
+                
                 PilotsListView()
                     .tabItem {
                         Image("helmet")
                             .resizable()
                             .frame(width: 30, height:30)
                         Text("Drivers")
-                        
-                        
                     }
+                    .tint(.white)
                 
                 ScheduleListView()
                     .tabItem {
@@ -44,6 +45,7 @@ struct ContentView: View {
                 
             }
             .tint(.color1)
+           
         
         
 

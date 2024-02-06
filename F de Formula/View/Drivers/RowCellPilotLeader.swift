@@ -18,7 +18,7 @@ struct RowCellPilotLeader: View {
     var body: some View {
         
         
-        NavigationLink(destination: DriverDetailsView(driver2: driver2, url1: url, DataDriver: DataDriver)) {
+        NavigationLink(destination: DriverDetailsView(driver2: driver2, url1: url, dataDriver: DataDriver)) {
             ZStack() {
                 Color(.color3)
                 
@@ -155,6 +155,6 @@ let constructor = Constructor(constructorId: "ferrari", url: "", name: "Red Bull
 
 let extraData = DriverExtraData(season: "Empty", driver: DriverExtra)
 
-let DriverExtra = [DataDriver(id: "empty", placeofborn: "2000-01-01", worldchampions: "0")]
+let DriverExtra = [DataDriver(id: "empty", placeofborn: "2000-01-01", worldchampions: "0", country: "uk")]
 
 

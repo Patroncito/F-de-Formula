@@ -67,7 +67,6 @@ struct PilotsListView: View {
                     }
             }
                 .navigationTitle("Drivers")
-                    .foregroundStyle(.white)
                     .toolbarColorScheme(.dark)
                     .navigationBarTitleDisplayMode(.automatic)
                     .toolbarBackground(Color.color1)
@@ -81,6 +80,7 @@ struct PilotsListView: View {
                             
                         })
                     }
+                    
             }
         
         
