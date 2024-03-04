@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "circuit-rodriguez.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

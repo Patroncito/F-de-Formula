@@ -12,16 +12,8 @@ struct ScheduleRowView: View {
 
     var body: some View {
         
-        
-        Button(action: {
-            
-        print(raceSchedule)
-            
-        }, label: {
-            
-            
-            
-            
+  
+        NavigationLink (destination: ScheduleDetailsView(raceSchedule: raceSchedule)) {
             HStack{
                 
                 VStack(spacing: 4) {
@@ -73,8 +65,8 @@ struct ScheduleRowView: View {
 
             )
             .clipShape(RoundedRectangle(cornerRadius: 16))
+        }
 
-        })
     }
 }
 

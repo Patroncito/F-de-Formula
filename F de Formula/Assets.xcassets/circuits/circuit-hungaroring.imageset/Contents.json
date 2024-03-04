@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "circuit-hungaroring.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
